@@ -30,10 +30,10 @@ public class FormTests {
         js = (JavascriptExecutor) driver;
     }
 
-    @AfterMethod
-    public void closeBrowser() {
-        driver.quit();
-    }
+   @AfterMethod
+   public void closeBrowser() {
+       driver.quit();
+   }
 
     @Test(priority = 0)
     public void formTest() throws InterruptedException {
@@ -70,11 +70,12 @@ public class FormTests {
         male.click();
         mobileNumber.sendKeys("5515515511");
 
-        dateOfBirth.click();
+
         String birthYear = "2004";
         String birthMonth = "November";
         String birthDay = "27";
 
+        dateOfBirth.click();
         while (true) {
 
             //I know it's a bad Xpath, but I honestly have no idea how to write it in this case :D
